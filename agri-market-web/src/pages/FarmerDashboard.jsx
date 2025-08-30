@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Plus, Edit, Trash2, Package, DollarSign, Users, TrendingUp } from 'lucide-react'
 
+<<<<<<< HEAD
 export default function FarmerDashboard({ user }) {
+=======
+const FarmerDashboard = ({ user }) => {
+>>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
   const [products, setProducts] = useState([
     {
       id: 1,
@@ -328,3 +332,7 @@ export default function FarmerDashboard({ user }) {
   )
 }
 
+<<<<<<< HEAD
+=======
+export default FarmerDashboard
+>>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f

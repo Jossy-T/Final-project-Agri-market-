@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Search, Filter, ShoppingCart, Star, MapPin } from 'lucide-react'
 
+<<<<<<< HEAD
 export default function ClientDashboard({ user }){
+=======
+const ClientDashboard = ({ user }) => {
+>>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [cart, setCart] = useState([])
@@ -221,3 +225,7 @@ export default function ClientDashboard({ user }){
   )
 }
 
+<<<<<<< HEAD
+=======
+export default ClientDashboard
+>>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
