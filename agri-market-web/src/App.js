@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import  { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import FarmerDashboard from './pages/FarmerDashboard'
+import ClientDashboard from './pages/ClientDashboard'
+import "./App.css"
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Product from './pages/Product'
+import Order from './pages/Order'
+import Profile from './pages/Profile'
+import About from './pages/About'
 
-function App() {
+export default function App() {
+  const [user, setUser] = useState(null)
+  const [notifications, setNotifications] = useState([
+    { id: 1, message: "New order received for Organic Tomatoes", time: "2 hours ago", read: false },
+    { id: 2, message: "Your order has been confirmed", time: "1 day ago", read: true }
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header user={user} notifications={notifications} />
+        <main className="pt-16">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/register" element={<Register setUser={setUser} />} />
+            <Route path="/farmer-dashboard" element={<FarmerDashboard user={user} />} />
+            <Route path="/client-dashboard" element={<ClientDashboard user={user} />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/orders" element={<Order user={user} />} />
+            <Route path="/profile" element={<Profile user={user} />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
 }
-
-export default App;
