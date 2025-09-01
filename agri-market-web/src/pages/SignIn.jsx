@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { FaGoogle, FaFacebookF, FaWhatsapp } from "react-icons/fa"; // React Icons
+import { FaGoogle, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import "../App.css";
 
 export default function SignIn() {
   const { login } = useAuth();
@@ -23,27 +24,57 @@ export default function SignIn() {
 
   const handleSocialLogin = (platform) => {
     alert(`Login with ${platform} clicked!`);
-    // Integrate OAuth here later
   };
 
   return (
     <div className="signin-page">
       <div className="signin-container">
-        {/* Left Side with Image & Stickers */}
+        {/* Left Side */}
         <div className="signin-side">
           <img
             className="bg-image"
             src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
             alt="Farm Fresh"
           />
-          <div className="stickers">
-            <div className="sticker">🌱 Fresh</div>
-            <div className="sticker">🍎 Organic</div>
-            <div className="sticker">🚜 Local</div>
+
+          {/* Feature Cards */}
+          <div className="features-grid">
+            <div className="feature-card">
+              <span>🛒</span>
+              <h4>Direct from Farmers</h4>
+              <p>Buy fresh produce straight from local farmers.</p>
+            </div>
+            <div className="feature-card">
+              <span>🌱</span>
+              <h4>100% Organic</h4>
+              <p>Support sustainable and healthy farming.</p>
+            </div>
+            <div className="feature-card">
+              <span>🚚</span>
+              <h4>Fast Delivery</h4>
+              <p>Get products delivered quickly to your door.</p>
+            </div>
+            <div className="feature-card">
+              <span>🌾</span>
+              <h4>Sustainable Farming</h4>
+              <p>Promote eco-friendly agricultural practices.</p>
+            </div>
           </div>
-          <div className="description">
-            <h2>AgriMarket</h2>
-            <p>Get fresh produce directly from local farmers. Support small farms and enjoy organic products delivered to your doorstep.</p>
+
+          {/* Stats */}
+          <div className="stats">
+            <div className="stat">
+              <h3>1000+</h3>
+              <p>Farmers</p>
+            </div>
+            <div className="stat">
+              <h3>5000+</h3>
+              <p>Products</p>
+            </div>
+            <div className="stat">
+              <h3>99%</h3>
+              <p>Delivery Success</p>
+            </div>
           </div>
         </div>
 
@@ -51,7 +82,6 @@ export default function SignIn() {
         <div className="signin-form">
           <h2>Sign In</h2>
           {error && <p className="error">{error}</p>}
-
           <input
             type="email"
             placeholder="Email"
@@ -70,9 +100,15 @@ export default function SignIn() {
           <div className="social-login">
             <p>Or sign in with</p>
             <div className="social-buttons">
-              <button className="btn-google" onClick={() => handleSocialLogin("Google")}><FaGoogle size={20} /></button>
-              <button className="btn-facebook" onClick={() => handleSocialLogin("Facebook")}><FaFacebookF size={20} /></button>
-              <button className="btn-whatsapp" onClick={() => handleSocialLogin("WhatsApp")}><FaWhatsapp size={20} /></button>
+              <button className="btn-google" onClick={() => handleSocialLogin("Google")}>
+                <FaGoogle size={20} />
+              </button>
+              <button className="btn-facebook" onClick={() => handleSocialLogin("Facebook")}>
+                <FaFacebookF size={20} />
+              </button>
+              <button className="btn-whatsapp" onClick={() => handleSocialLogin("WhatsApp")}>
+                <FaWhatsapp size={20} />
+              </button>
             </div>
           </div>
         </div>

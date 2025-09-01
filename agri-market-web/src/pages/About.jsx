@@ -18,7 +18,7 @@ const About = () => {
         </div>
         <div className="hero-image">
           <img
-            src="https://images.unsplash.com/photo-1592928300916-1a72c92f8de7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800"
+            src="https://play-lh.googleusercontent.com/FemCAqUfRCW-hzwl8pFV08IOgc23i2ukJk4bZilVXLQuzxzHt4ujzzs5kt3GWF__7O4"
             alt="About AgriMarket"
           />
         </div>
