@@ -6,7 +6,7 @@ export default function Product (){
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [sortBy, setSortBy] = useState('name')
 
-  const products = [
+  let products = [
     {
       id: 1,
       name: "Organic Tomatoes",
@@ -197,7 +197,7 @@ export default function Product (){
               <p className="text-gray-700 text-sm mb-3 line-clamp-2">{product.description}</p>
 
               <div className="flex justify-between items-center mb-4">
-                <span className="text-2xl font-bold text-primary">${product.price}</span>
+                <span className="text-2xl font-bold text-primary">{product.price} </span>
                 <span className="text-gray-600">per {product.unit}</span>
               </div>
 

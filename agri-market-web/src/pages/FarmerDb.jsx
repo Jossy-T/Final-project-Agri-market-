@@ -11,14 +11,18 @@ export default function FarmerDb({ user }) {
   };
 
   return (
-    <div>
+    <div className="farmer-dashboard">
       <h2>Farmer Dashboard</h2>
-      <p>Welcome, {user.name}</p>
-      <p>Farm Name: {user.farmName}</p>
-      <p>Location: {user.location}</p>
-      <p>Phone: {user.phone}</p>
+      <h3>Welcome, {user.name}</h3>
+      <div className="profile-card">
+        <p>Name: {user.name}</p>
+        <p>Farm Name: {user.farmName}</p>
+        <p>Location: {user.location}</p>
+        <p>Phone: {user.phone}</p>
+      </div>
 
-      <h3>Add Product</h3>
+      <h4>Add Product</h4>
+      <div className="inputs">
       <input
         placeholder="Product Name"
         value={productForm.name}
@@ -36,16 +40,27 @@ export default function FarmerDb({ user }) {
         value={productForm.quantity}
         onChange={(e) => setProductForm({ ...productForm, quantity: e.target.value })}
       />
-      <button onClick={addProduct}>Add Product</button>
+      </div>
 
-      <h3>Your Products</h3>
+      <div className="farmer-dashboard-btn">
+      <button onClick={addProduct}>Add Product</button>
+      </div>
+
+
+      <h3 className="your-product">Your Products</h3>
+      <div className="farmer-dashboard-productlists">
       <ul>
         {products.map((p) => (
           <li key={p.id}>
-            {p.name} - ${p.price} - {p.quantity} pcs
+            <div className="farmer-productlists">
+            product name: {p.name} <br/>
+            Price: {p.price}Birr  <br/>
+            quantity: {p.quantity} pcs <br/>
+          </div>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }

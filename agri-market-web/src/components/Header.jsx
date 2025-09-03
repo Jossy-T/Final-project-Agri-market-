@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, Bell, User, ShoppingCart, Sprout } from 'lucide-react'
 
-<<<<<<< HEAD
+
 export default function Header ({ user, notifications }) {
-=======
 const Header = ({ user, notifications }) => {
->>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showNotifications, setShowNotifications] = useState(false)
 
   const unreadCount = notifications?.filter(n => !n.read).length || 0
 
-  return (
-<<<<<<< HEAD
+  return <>
+
     <header className="header">
       <nav className="navigation">
         <div className="header-main">
@@ -27,7 +26,7 @@ const Header = ({ user, notifications }) => {
             {/* Desktop Navigation */}
             <div className="desktop-navigation">
               <Link to="/" className='page'>Home</Link>
-              <Link to="/products" className='page'>Products</Link>
+              <Link to="/Products" className='page'>Products</Link>
               <Link to="/about" className='page'>About</Link>
               
               {user ? (
@@ -100,10 +99,13 @@ const Header = ({ user, notifications }) => {
 
         {/* Mobile Menu */}
         {/* {isMenuOpen && (
-=======
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-      <nav className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
+
+        <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+          <nav className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+          </nav>
+        </header>*/}
+    
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Sprout className="h-8 w-8 text-primary" />
@@ -181,11 +183,10 @@ const Header = ({ user, notifications }) => {
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-        </div>
+        
 
         {/* Mobile Menu */}
         {isMenuOpen && (
->>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
           <div className="md:hidden mt-4 pb-4 border-t">
             <div className="flex flex-col space-y-4 pt-4">
               <Link to="/" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
@@ -213,17 +214,9 @@ const Header = ({ user, notifications }) => {
               )}
             </div>
           </div>
-<<<<<<< HEAD
-        )} */}
-=======
         )}
->>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
-      </nav>
+      </nav>  
     </header>
-  )
-}
+  </>
 
-<<<<<<< HEAD
-=======
-export default Header
->>>>>>> 4850fbe497d9ee32cf7c78f4d335c72d89c8fa2f
+  } } 

@@ -5,7 +5,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/auth"); // redirect to auth page (sign in/register)
+    navigate("/Register"); // redirect to auth page (sign in/register)
   };
 
   const handleExploreProducts = () => {
@@ -25,10 +25,10 @@ const Home = () => {
             AgriMarket eliminates middlemen, ensuring farmers get fair prices and buyers get fresh, quality produce.
           </p>
           <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={handleGetStarted}>
+            <button className="home-getstart-btn" onClick={handleGetStarted}>
               Get Started →
             </button>
-            <button className="btn btn-outline" onClick={handleExploreProducts}>
+            <button className="home-exploreproduct-btn" onClick={handleExploreProducts}>
               Explore Products
             </button>
           </div>

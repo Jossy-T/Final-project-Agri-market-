@@ -1,13 +1,7 @@
-import React, { useState } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity,
-  StyleSheet,
-  Modal,
-} from "react-native";
+import { useState } from "react";
+import {View,Text,ScrollView,TouchableOpacity,StyleSheet,Modal,} from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import HomeScreen from "./screens/HomeScreen";
 import MarketplaceScreen from "./screens/MarketplaceScreen";

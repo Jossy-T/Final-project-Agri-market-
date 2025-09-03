@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ScrollView,
-  Alert,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform
-} from 'react-native';
+import {View,Text,TextInput,TouchableOpacity,ScrollView,Alert,StyleSheet,KeyboardAvoidingView,Platform} from 'react-native';
 import { useAuth } from '../context/AuthContext';
 
 export default function AuthScreen({ onClose }) {

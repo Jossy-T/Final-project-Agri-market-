@@ -11,7 +11,7 @@ const Navbar = () => {
         <Link to="/" className="logo">🌱 AgriMarket</Link>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/products">Products</Link>
+        <Link to="/Products">Products</Link>
       </div>
       <div className="navbar-right">
         {user ? (
@@ -21,8 +21,8 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <Link to="/signin" className="btn btn-primary">Sign In</Link>
-            <Link to="/register" className="btn btn-outline">Register</Link>
+            <Link to="/signin" className="header-registration-form-btn">Sign In</Link>
+            <Link to="/register" className="header-registration-form-btn">Register</Link>
           </>
         )}
       </div>
