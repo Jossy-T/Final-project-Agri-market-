@@ -1,4 +1,4 @@
-/* ===== Navbar Styles ===== */
+/* ==== Navbar Styles ==== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -752,6 +752,8 @@
 .signin-page {
   display: flex;
   min-height: 100vh;
+  justify-content: center;
+  width: fit-content;
   font-family: 'Poppins', sans-serif;
   background: #f0fff4;
 }
@@ -759,22 +761,26 @@
 /* Container */
 .signin-container {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  /* width: 100%; */
 }
 
 /* Left Side */
 .signin-side {
-  flex: 1;
-  background: #e6f4ea;
-  padding: 2rem;
   display: flex;
+  background: #e6f4ea;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 2rem;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
+  margin-left: 10rem;
+  width: 70%;
+  /* overflow-y: auto; */
 }
 
 .bg-image {
-  width: 100%;
+  width: fit-content;
   max-width: 350px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,100,0,0.1);
@@ -784,9 +790,9 @@
 /* Feature Cards Grid */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 .feature-card {
@@ -830,43 +836,48 @@
 
 /* Right Side - Login Form */
 .signin-form {
-  flex: 1;
-  background: #ffffff;
-  padding: 3rem;
   display: flex;
+  background: #ffffff;
+  padding-bottom:50px;
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-top: 0px;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   box-shadow: 0 15px 35px rgba(46,125,50,0.2);
-  margin: 2rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
+  height:50%;
 }
 
 /* Form Elements */
 .signin-form h2 {
-  margin-bottom: 1rem;
+  margin: 1rem;
   color: #276749;
 }
 
 .signin-form input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  margin-top: 0px;
+  margin-bottom: 20px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  outline: none;
+  /* outline: none; */
   font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 
 .signin-form input:focus {
-  border-color: #38a169;
+  border:2px solid #38a169 ;
 }
 
 /* Buttons */
 .btn-primary {
-  width: 100%;
-  padding: 0.85rem;
+  /* width: 100%; */
+  padding: 0rem;
   border-radius: 10px;
   border: none;
   background: #38a169;
@@ -880,41 +891,15 @@
   background: #276749;
 }
 
-/* Social Login */
-.social-login {
-  margin-top: 1.5rem;
-  width: 100%;
-  text-align: center;
+.signup-here{
+  text-decoration: none;
+  color: #15803d;
+  background-color: #d2f0dd;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2rem;
 }
 
-.social-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5rem;
-}
-
-.social-buttons button {
-  flex: 1;
-  margin: 0 0.25rem;
-  padding: 0.5rem 0;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.btn-google { background: #db4437; }
-.btn-google:hover { background: #c1351d; }
-
-.btn-facebook { background: #4267b2; }
-.btn-facebook:hover { background: #3757a1; }
-
-.btn-whatsapp { background: #25D366; }
-.btn-whatsapp:hover { background: #1da851; }
 
 /* Error Message */
 .error {

@@ -9,7 +9,7 @@ export default function Register() {
     email: "",
     password: "",
     confirmPassword: "",
-    userType: "buyer",
+    userType: "farmer",
     farmName: "",
     location: "",
     phone: "",
@@ -38,28 +38,28 @@ export default function Register() {
   };
 
   if (user) {
-    return user.userType === "farmer" ? (
-      <FarmerDb user={user} />
+    return formData.userType === "farmer" ? (
+      <FarmerDb user={formData} />
     ) : (
-      <ClientDb user={user} />
+      <ClientDb user={formData}/>
     );
   }
 
   return (
-    <div className="register-page modern-register">
-      <div className="register-left">
-  <img
-    src="https://www.grainbow.fr/wp-content/uploads/2022/12/Header-Agrimarket-1024x768.png"
-    alt="AgriMarket"
-  />
-  <div className="register-info">
-    <h2>Join <span className="highlight">AgriMarket</span></h2>
-    <p>
-      Connect with local farmers or become a buyer. Enjoy fresh produce,
-      transparent prices, and fast delivery directly from farms.
-    </p>
-  </div>
-</div>
+  <div className="register-page modern-register">
+    <div className="register-left">
+      <img
+      src="https://www.grainbow.fr/wp-content/uploads/2022/12/Header-Agrimarket-1024x768.png"
+      alt="AgriMarket"
+      />
+      <div className="register-info">
+      <h2>Join <span className="highlight">AgriMarket</span></h2>
+      <p>
+        Connect with local farmers or become a buyer. Enjoy fresh produce,
+        transparent prices, and fast delivery directly from farms.
+      </p>
+    </div>
+    </div>
 
 
       <div className="register-right">
@@ -165,3 +165,6 @@ export default function Register() {
     </div>
   );
 }
+
+
+

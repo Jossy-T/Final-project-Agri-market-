@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 
-export default function FarmerDb({ user }) {
+export default function FarmerDb() {
+   const location = useLocation();
+  const { user } = location.state || {};
+  
+  if (!user) {
+    return (
+      <div className="error-page">
+        <h2>Error: User data not found</h2>
+        <p>Please <a href="/register">register</a> or <a href="/signin">sign in</a> first.</p>
+      </div>
+    );
+  }
+
   const [products, setProducts] = useState([]);
   const [productForm, setProductForm] = useState({ name: "", price: "", quantity: "" });
 

@@ -1,6 +1,19 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function ClientDb({ user, products }) {
+export default function ClientDb() {
+   const location = useLocation();
+  const { user } = location.state || {};
+  
+  if (!user) {
+    return (
+      <div className="error-page">
+        <h2>Error: User data not found</h2>
+        <p>Please <a href="/register">register</a> or <a href="/signin">sign in</a> first.</p>
+      </div>
+    );
+  }
+
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
 

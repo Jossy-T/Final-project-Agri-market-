@@ -1,6 +1,5 @@
-import React from "react";
 import "../App.css"; // reuse your main CSS
-
+import logo from "../image/connection.png"
 const About = () => {
   return (
     <div className="about-container">
@@ -18,7 +17,7 @@ const About = () => {
         </div>
         <div className="hero-image">
           <img
-            src="https://play-lh.googleusercontent.com/FemCAqUfRCW-hzwl8pFV08IOgc23i2ukJk4bZilVXLQuzxzHt4ujzzs5kt3GWF__7O4"
+            src={logo}
             alt="About AgriMarket"
           />
         </div>

@@ -121,7 +121,7 @@ const HomeScreen = ({ onNavigate }) => {
 
 export default HomeScreen;
 
-// ----------------- Styles -----------------
+// ----------------- Styles -----------------//
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff", padding: 16 },
   hero: { marginBottom: 24 },
